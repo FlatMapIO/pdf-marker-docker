@@ -7,6 +7,7 @@ with open('pyproject.toml', 'r') as f:
 # 获取依赖项
 dependencies = data['tool']['poetry']['dependencies']
 
+del dependencies['python']
 
 pip_install_items = [f'{k}=={v.replace("^", "")}' for k, v in dependencies.items()]
 
