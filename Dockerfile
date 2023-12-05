@@ -4,8 +4,7 @@ USER sa
 WORKDIR /workspace
 
 COPY pkgx.yaml .
-COPY ./scripts ./
-
+COPY ./scripts ./scripts
 COPY ./marker ./
 
 RUN sudo apt-get update -y; \
@@ -14,7 +13,7 @@ RUN sudo apt-get update -y; \
     libmagic1; \
   sudo rm -rf /var/lib/apt/lists/*
 
-RUN ./scripts/install.sh
+RUN bash ./scripts/install.sh
 
 WORKDIR /workspace/marker
 ENV TESSDATA_PREFIX=/workspace/data/tessdata
