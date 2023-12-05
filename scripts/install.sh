@@ -12,7 +12,7 @@ mv marker-master marker
 
 cd marker
 
-poetry install
+poetry install --no-dev
 
 poetry cache clear PyPI --all
 
