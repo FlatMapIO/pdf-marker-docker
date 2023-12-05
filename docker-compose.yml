@@ -6,7 +6,7 @@ services:
     # build:
     #   context: .
     #   dockerfile: docker/Dockerfile
-    shm_size: 1gb
+    shm_size: 10.24gb
     deploy:
       resources:
         reservations:

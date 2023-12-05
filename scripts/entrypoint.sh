@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 eval "$(pkgx --shellcode)"
 
+source .venv/bin/activate
 
 python convert.py \
   /workspace/data/input  \
