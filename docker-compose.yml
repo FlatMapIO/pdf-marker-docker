@@ -22,4 +22,4 @@ services:
       - ./local.env:/workspace/marker/local.env:ro
     ports:
     # docker compose run --rm -it app
-    command: python convert.py
+    # command: python convert.py
