@@ -1,11 +1,14 @@
 [Marker](https://github.com/VikParuchuri/marker) docker
 
+# Usage
 
-```
-# put pdf to data/input
-# edit data/metadata.json
-ls data/input
 
-# run once
+Put pdf to `data/input`
+
+Edit data/metadata.json
+
+Run convert once
+
+```shell
 docker compose run --rm -it app
 ```

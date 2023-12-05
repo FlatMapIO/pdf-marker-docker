@@ -5,7 +5,7 @@ WORKDIR /workspace
 
 COPY pkgx.yaml .
 COPY ./scripts ./scripts
-COPY ./marker ./
+COPY ./marker ./marker
 
 RUN sudo apt-get update -y; \
   sudo apt-get install -y \
@@ -17,7 +17,9 @@ RUN bash ./scripts/install.sh
 
 WORKDIR /workspace/marker
 ENV TESSDATA_PREFIX=/workspace/data/tessdata
-CMD python convert.py \
+
+CMD source  .venv/bin/activate; \
+  python convert.py \
   /workspace/data/input  \
   /workspace/data/output  \
   --workers 10 \

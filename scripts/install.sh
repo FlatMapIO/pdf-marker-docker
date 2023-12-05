@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 eval "$(pkgx --shellcode)"
+dev
 
 # ====================================================
 # script
 # ====================================================
+if [[ ! -d .venv ]]; then
+  python -m venv .venv
+fi
 
-python -m venv .venv
 source .venv/bin/activate
 
 pip install --no-cache-dir \
@@ -25,7 +28,7 @@ pip install --no-cache-dir \
   tqdm \
   tabulate \
   thefuzz \
-  python \
+  python-magic \
   pyspellchecker \
   ftfy \
   nltk \
