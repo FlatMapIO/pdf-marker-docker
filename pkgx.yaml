@@ -1,7 +1,6 @@
 # https://pkgx.dev/
 dependencies:
   - python@3.11
-  - python-poetry.org
   - tesseract-ocr.github.io
   - ghostscript.com
   - github.com/ocrmypdf/OCRmyPDF
