@@ -1,10 +1,12 @@
 # https://pkgx.dev/
 dependencies:
   - python@3.11
-  # - python-poetry.org
+  - python-poetry.org
   - tesseract-ocr.github.io
   - ghostscript.com
   - github.com/ocrmypdf/OCRmyPDF
+  - info-zip.org/unzip
+  - aria2.github.io
 
 env:
   SHELL=fish

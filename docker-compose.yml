@@ -18,6 +18,7 @@ services:
     user: sa
     working_dir: /workspace
     volumes:
+      - ~/.cache:/home/sa/.cache
       - ./data/:/workspace/data
       - ./local.env:/workspace/marker/local.env:ro
     ports:

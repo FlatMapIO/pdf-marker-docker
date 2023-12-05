@@ -1,3 +1,7 @@
 # https://github.com/tesseract-ocr/tessdata_best
 
 *.traineddata
+*.ttf
+*.aria2
+config
+config.zip

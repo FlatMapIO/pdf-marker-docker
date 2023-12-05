@@ -1,2 +1,6 @@
 https://github.com/tesseract-ocr/tessdata_best/raw/main/eng.traineddata
   out=eng.traineddata
+https://github.com/tesseract-ocr/tessdata_best/raw/main/chi_sim_vert.traineddata
+  out=chi_sim_vert.traineddata
+https://github.com/tesseract-ocr/tessconfigs/archive/refs/heads/main.zip
+  out=config.zip
