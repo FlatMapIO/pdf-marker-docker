@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  app:
+    image: huodon/pdf-marker
+    # build:
+    #   context: .
+    #   dockerfile: docker/Dockerfile
+    shm_size: 1gb
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              # 该参数必须出现
+              count: all
+              capabilities: [gpu]
+    user: sa
+    working_dir: /workspace
+    volumes:
+      - ./data/:/workspace/data
+      - ./local.env:/workspace/marker/local.env:ro
+    ports:
+    # docker compose run --rm -it app
+    command: python convert.py
